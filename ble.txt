@@ -1,0 +1,33 @@
+installation
+sudo apt-get install blueman bluez Bluetooth
+
+commands for bluetooth cli
+
+systemctl start bluetooth
+
+Enter following command to start bluetoothctl
+bluetoothctl
+
+turn the power to the controller on using following command
+power on
+
+enter devices to get the mac address of device with which we want to pair. This command gives a
+list of available devices.
+devices
+
+if no device is in the list then search for devices as follows,
+scan on
+
+turn the agent on
+agent on
+
+pair the Bluetooth device
+pair <mac address>
+e.g. pair 01:02:03:04:05:06
+
+If using a device without PIN then we need to manually mark the device as a trust device as
+follows,
+trust <mac address>
+
+Finally establish a connection between two Bluetooth enabled devices.
+Connect <mac address>
